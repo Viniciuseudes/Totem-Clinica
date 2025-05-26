@@ -1,4 +1,3 @@
-// clinic-kiosk (1)/components/welcome-screen.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -13,7 +12,6 @@ interface WelcomeScreenProps {
 export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
   const [showAttention, setShowAttention] = useState(false);
 
-  // Cycle attention-grabbing animation
   useEffect(() => {
     const interval = setInterval(() => {
       setShowAttention(true);
@@ -25,18 +23,17 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
 
   return (
     <div className="flex flex-col items-center justify-center h-full p-3 relative overflow-hidden">
-      {/* Background decorations - reduzido para menos elementos */}
+      {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-4 h-4 text-yellow-300 opacity-20"
-            // ALTERAÇÃO AQUI: Valores fixos para initial para evitar erro de hidratação
             initial={{
-              x: `${Math.random() * 100}%`, // Mantém a aleatoriedade horizontal na inicialização
-              y: `${Math.random() * 100}%`, // Mantém a aleatoriedade vertical na inicialização
+              x: `${Math.random() * 100}%`,
+              y: `${Math.random() * 100}%`,
               rotate: 0,
-              scale: Math.random() * 0.5 + 0.5, // Mantém a aleatoriedade no tamanho inicial
+              scale: Math.random() * 0.5 + 0.5,
             }}
             animate={{
               y: [null, "-100%"],
@@ -53,7 +50,7 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
         ))}
       </div>
 
-      {/* Main content - reduzido espaçamento */}
+      {/* Main content */}
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -74,7 +71,7 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
         </motion.div>
 
         <motion.h1
-          className="text-2xl sm:text-3xl font-extrabold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-700"
+          className="gradient-text text-2xl sm:text-3xl font-extrabold mb-2"
           animate={{
             scale: showAttention ? [1, 1.05, 1] : 1,
           }}
@@ -111,7 +108,7 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
         </motion.div>
       </motion.div>
 
-      {/* Floating element - apenas um */}
+      {/* Floating element */}
       <motion.div
         className="absolute bottom-4 right-4 bg-orange-500 text-white p-1.5 rounded-full shadow-lg"
         animate={{
