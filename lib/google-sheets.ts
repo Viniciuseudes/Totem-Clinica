@@ -61,11 +61,12 @@ export async function addRowToSheet(data: {
 // Funções auxiliares para obter nomes legíveis
 function getProfessionalName(value: string): string {
   const professionals: Record<string, string> = {
-    "dr-silva": "Dr. Silva - Clínico Geral",
-    "dra-santos": "Dra. Santos - Cardiologista",
-    "dr-oliveira": "Dr. Oliveira - Ortopedista",
-    "dra-costa": "Dra. Costa - Dermatologista",
-    "dr-pereira": "Dr. Pereira - Neurologista",
+    "dra-stephanie": "Dra. Stephanie - Psicóloga",
+    "dra-olda": "Dra. Olda - Nutricionista",
+    "dra-suely": "Dra. Suely - Fonoaudióloga",
+    "dra-Andressa": "Dra. Andressa Shaine - Nutricionista",
+    "dra-kaila": "Dra. Kaila - Psicóloga",
+    "dr-lucas": "Dr. Lucas - Psicólogo",
   }
   return professionals[value] || value
 }

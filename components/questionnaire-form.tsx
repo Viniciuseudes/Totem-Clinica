@@ -306,20 +306,23 @@ export function QuestionnaireForm({
                           <SelectValue placeholder="Selecione o profissional" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="dr-silva">
-                            Dr. Silva - Clínico Geral
+                          <SelectItem value="dra-stephanie">
+                            Dr. Stephanie - Psicóloga
                           </SelectItem>
-                          <SelectItem value="dra-santos">
-                            Dra. Santos - Cardiologista
+                          <SelectItem value="dra-olda">
+                            Dra. Olda - Nutricionista
                           </SelectItem>
-                          <SelectItem value="dr-oliveira">
-                            Dr. Oliveira - Ortopedista
+                          <SelectItem value="dra-suely">
+                            Dra. Suely - Fonoaudióloga
                           </SelectItem>
-                          <SelectItem value="dra-costa">
-                            Dra. Costa - Dermatologista
+                          <SelectItem value="dra-Andressa">
+                            Dra. Andressa Shaine - Nutricionista
                           </SelectItem>
-                          <SelectItem value="dr-pereira">
-                            Dr. Pereira - Neurologista
+                          <SelectItem value="dra-kaila">
+                            Dra. Kaila - Psicóloga
+                          </SelectItem>
+                          <SelectItem value="dra-lucas">
+                            Dr. Lucas - Psicólogo
                           </SelectItem>
                         </SelectContent>
                       </Select>
